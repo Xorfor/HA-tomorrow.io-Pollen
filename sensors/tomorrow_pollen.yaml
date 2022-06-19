@@ -14,14 +14,14 @@
   sensors:
   
     pollen_tree:
-      friendly_name: "Pollen - Bomen"
+      friendly_name: "Pollen - Trees"
       value_template: '{{ int(states.sensor.pollen.attributes["treeIndex"], default=0) }}'
 
     pollen_weed:
-      friendly_name: "Pollen - Kruiden"
+      friendly_name: "Pollen - Weeds"
       value_template: '{{ int(states.sensor.pollen.attributes["weedIndex"], default=0) }}'
 
     pollen_grass:
-      friendly_name: "Pollen - Grassen"
+      friendly_name: "Pollen - Grasses"
       value_template: '{{ int(states.sensor.pollen.attributes["grassIndex"], default=0) }}'
 
