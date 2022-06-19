@@ -31,3 +31,6 @@ Replace the `<lat>`, `<lon>`, and `<apikey>` with your values as done [Test](#te
 
 ### tomorrow_pollen.yaml
 Create the `/config/sensors/tomorrow_pollen.yaml` or add these lines to `configuration.yaml` as shown in: [tomorrow_pollen.yaml](/sensors/tomorrow_pollen.yaml)
+
+## Dashboard
+From [tomorrow.io](https://www.tomorrow.io/) you will get a pollen index from 1 to 5. Data can be presented on your dashboard. Look at [dashboard.yaml](dashboard.yaml) for an example.
