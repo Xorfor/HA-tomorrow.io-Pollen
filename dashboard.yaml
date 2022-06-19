@@ -1,0 +1,14 @@
+type: horizontal-stack
+cards:
+  - type: gauge
+    entity: sensor.pollen_tree
+    name: Trees
+    max: 5
+  - type: gauge
+    entity: sensor.pollen_grass
+    name: Grasses
+    max: 5
+  - type: gauge
+    entity: sensor.pollen_weed
+    max: 5
+    name: Weeds
