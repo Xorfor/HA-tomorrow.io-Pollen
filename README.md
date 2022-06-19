@@ -30,33 +30,4 @@ See [secrets.yaml](secrets.yaml) as an example.
 Replace the `<lat>`, `<lon>`, and `<apikey>` with your values as done [Test](#test).
 
 ### tomorrow_pollen.yaml
-Create the `/config/sensors/tomorrow_pollen.yaml` or add these lines to `configuration.yaml`:
-
-```
-- platform: rest
-  name: Pollen
-  scan_interval: 600
-  resource: !secret tomorrow-api-pollen
-  json_attributes_path: "$.data.timelines[0].intervals[0].values"
-  json_attributes:
-    - treeIndex
-    - weedIndex
-    - grassIndex
-  value_template: >-
-    {{ value_json.message }}
-
-- platform: template
-  sensors:
-  
-    pollen_tree:
-      friendly_name: "Pollen - Bomen"
-      value_template: '{{ int(states.sensor.pollen.attributes["treeIndex"], default=0) }}'
-
-    pollen_weed:
-      friendly_name: "Pollen - Kruiden"
-      value_template: '{{ int(states.sensor.pollen.attributes["weedIndex"], default=0) }}'
-
-    pollen_grass:
-      friendly_name: "Pollen - Grassen"
-      value_template: '{{ int(states.sensor.pollen.attributes["grassIndex"], default=0) }}'
-```
+Create the `/config/sensors/tomorrow_pollen.yaml` or add these lines to `configuration.yaml` as shown in: [tomorrow_pollen.yaml](/sensors/tomorrow_pollen.yaml)
